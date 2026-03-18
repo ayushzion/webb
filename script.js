@@ -12,7 +12,7 @@ function typeWriter() {
 
     if (twPaused) {
         twPaused = false;
-        setTimeout(typeWriter, 1650);
+        setTimeout(typeWriter, 1250);
         return;
     }
 
