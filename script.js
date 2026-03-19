@@ -186,14 +186,14 @@ const festivals = [
 
 const randomMessages = [
     "#user dead", "#system offline", "#porting kill me", "#inactive",
-    "uhh r hutiya", "meaowwww", "#unknown error detected",
-    "#mai ka ladle", "#chal bkl nikal", "#aapki maa ka bhrosha",
-    "#loading life...", "#retrying existence", "#ghop ghop,
-    "#system overheat", "#ayush_failed", "#fuck uhh man",
-    "#server error", "#silent mode enabled", "#restarting hope...",
-    "#no signal", "#processing db", "#ayush.exe running",
+    "#meaowww", "#mai ka ladle", "#aapki ma ka bharosha",
+    "#rebooting sys", "#chal nikal bkl", "#im ayush",
+    "#loading life...", "#retrying existence", "#vibe coder",
+    "#system overheat", "#ayush_failed", "#pcmb student",
+    "#internal server error", "#hutiya ho ka", "#hatt bkl..",
+    "#no signal", "#db hacked", "#ayush.exe running",
     "#ghost_mode_active", "#null db", "#fuck uhh",
-    "#fahhhhhhhhh"
+    "#lost_in_source_code"
 ];
 const today = new Date().toISOString().split("T")[0];
 const eventBox = document.getElementById("eventText");
