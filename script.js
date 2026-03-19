@@ -1,4 +1,4 @@
-const twPhrases = ["#DEAD", "#YADAV",".EXE", "#YADAV" ,"#404", "#YADAV" , "#ALIVE", "#YADAV", "#NULL", "#ERROR","#YADAV"];
+const twPhrases = ["#DEAD", ".EXE", "#404", "#ALIVE", "#NULL", "#ERROR","#YADAV"];
 let twIndex = 0;
 let twChar = 0;
 let twDeleting = false;
@@ -7,15 +7,12 @@ let twPaused = false;
 function typeWriter() {
     const el = document.getElementById("tw-text");
     if (!el) return;
-
     const current = twPhrases[twIndex];
-
     if (twPaused) {
         twPaused = false;
         setTimeout(typeWriter, 1250);
         return;
     }
-
     if (!twDeleting) {
         twChar++;
         el.textContent = current.slice(0, twChar);
@@ -51,7 +48,6 @@ if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.classList.toggle('active');
         mobileMenu.classList.toggle('active');
     });
-
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenuBtn.classList.remove('active');
@@ -60,31 +56,12 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
-const cursor = document.getElementById("cursor");
-
-if (window.innerWidth >= 1024) {
-    document.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-        cursor.classList.add('active');
-    });
-
-    document.querySelectorAll("a, button").forEach(el => {
-        el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
-        el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
-    });
-}
-
-
-
 document.querySelectorAll(".acc-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         const content = btn.nextElementSibling;
         const isActive = btn.classList.contains('active');
-        
         document.querySelectorAll(".acc-btn").forEach(b => b.classList.remove('active'));
         document.querySelectorAll(".acc-content").forEach(c => c.style.maxHeight = null);
-        
         if (!isActive) {
             btn.classList.add('active');
             const inner = content.querySelector(".acc-inner");
@@ -186,18 +163,18 @@ const festivals = [
 
 const randomMessages = [
     "#user dead", "#system offline", "#porting kill me", "#inactive",
-    "#meaowww", "#mai ka ladle", "#aapki ma ka bharosha",
-    "#rebooting sys", "#chal nikal bkl", "#im ayush",
-    "#loading life...", "#retrying existence", "#vibe coder",
-    "#system overheat", "#ayush_failed", "#pcmb student",
-    "#internal server error", "#hutiya ho ka", "#hatt bkl..",
-    "#no signal", "#db hacked", "#ayush.exe running",
+    "#leave everything", "#404 soul not found", "#unknown error detected",
+    "#rebooting sys", "#memory corrupted", "#run.exe stopped",
+    "#loading life...", "#retrying existence", "#fatal: cloned myself wrong",
+    "#system overheat", "#ayush_failed", "#brain_process not responding",
+    "#internal server error", "#silent mode enabled", "#restarting hope...",
+    "#no signal", "#processing db", "#ayush.exe running",
     "#ghost_mode_active", "#null db", "#fuck uhh",
     "#lost_in_source_code"
 ];
+
 const today = new Date().toISOString().split("T")[0];
 const eventBox = document.getElementById("eventText");
-
 const todayEvent = festivals.find(f => f.date === today);
 
 function formatMessage(eventName) {
