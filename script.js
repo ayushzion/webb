@@ -1,4 +1,4 @@
-const twPhrases = ["#DEAD", ".EXE", "#404", "#ALIVE", "#NULL", "#ERROR","#YADAV"];
+const twPhrases = ["#DEAD", ".EXE", "#YADAV", "#404", "#YADAV", "#ALIVE", "#NULL", "#ERROR","#YADAV"];
 let twIndex = 0;
 let twChar = 0;
 let twDeleting = false;
