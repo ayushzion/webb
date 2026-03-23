@@ -457,6 +457,26 @@ section {
     opacity: 0.95;
 }
 
+.nexus-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(255, 50, 50, 0.15), rgba(255, 100, 100, 0.15));
+    border: 1px solid rgba(255, 80, 80, 0.3);
+    border-radius: 12px;
+    color: #ff5555;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.nexus-link:hover {
+    background: linear-gradient(135deg, rgba(255, 50, 50, 0.25), rgba(255, 100, 100, 0.25));
+    border-color: rgba(255, 80, 80, 0.5);
+    transform: translateX(4px);
+}
+
 @media (min-width: 768px) {
     .acc-btn { padding: 24px 28px; border-radius: 28px; }
     .acc-inner { padding: 28px 32px; border-radius: 0 0 28px 28px; }
