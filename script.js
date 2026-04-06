@@ -122,7 +122,7 @@ const festivals = [
     { name: "April Fool's Day", date: "2026-04-01" },
     { name: "Hanuman Jayanti", date: "2026-04-02" },
     { name: "Good Friday", date: "2026-04-03" },
-    { name: "Manya Birthday", date: "2026-04-07" },
+    { name: "Birthday", date: "2026-04-07" },
     { name: "Vaisakhi", date: "2026-04-14" },
     { name: "Ambedkar Jayanti", date: "2026-04-14" },
     { name: "Earth Day", date: "2026-04-22" },
@@ -180,7 +180,7 @@ const todayEvent = festivals.find(f => f.date === today);
 function formatMessage(eventName) {
     if (eventName === "Diwali") return " Happy Diwali Everyone!";
     if (eventName === "Ayush Birthday") return " Happy Birthday To Me...!";
-    if (eventName === "Manya Birthday") return " Happy Birthday Manya…..!";
+    if (eventName === "Birthday") return " Happy Birthday…..!";
     return `Happy ${eventName}!`;
 }
 
